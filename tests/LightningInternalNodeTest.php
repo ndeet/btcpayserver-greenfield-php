@@ -105,7 +105,7 @@ final class LightningInternalNodeTest extends BaseTest
 
         $this->assertIsArray($lightningNodeInformation->getNodeURIs());
         $this->assertIsInt($lightningNodeInformation->getBlockHeight());
-        $this->assertIsString($lightningNodeInformation->getAlias());
+        //$this->assertIsString($lightningNodeInformation->getAlias());
         $this->assertIsString($lightningNodeInformation->getColor());
         $this->assertIsString($lightningNodeInformation->getVersion());
         $this->assertIsInt($lightningNodeInformation->getPeersCount());

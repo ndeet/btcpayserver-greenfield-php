@@ -19,12 +19,6 @@ class BaseTest extends TestCase
         $dotenv = Dotenv::createImmutable(__DIR__);
         $dotenv->safeLoad();
 
-        echo '$_ENV: ';
-        echo $_ENV['BTCPAY_API_KEY'];
-        echo "\n";
-        echo 'getenv(): ';
-        echo getenv('BTCPAY_API_KEY');
-
         $apiKey = getenv('BTCPAY_API_KEY');
         $host = getenv('BTCPAY_HOST');
         $storeId = getenv('BTCPAY_STORE_ID');
