@@ -32,6 +32,11 @@ jobs:
         id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
 
+      - name: show env vars
+        run: |
+          echo "env var ${{ BTCPAY_STORE_ID }}"
+          echo "env var secret ${{ secret.BTCPAY_STORE_ID }}"
+
       - name: Cache composer dependencies
         uses: actions/cache@v2
         with:
