@@ -32,13 +32,6 @@ jobs:
         id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
 
-      - name: show env vars
-        run: |
-          echo "env var: "
-          echo ${{ BTCPAY_STORE_ID }}
-          echo "env var secret: " 
-          echo ${{ secret.BTCPAY_STORE_ID }}
-
       - name: Cache composer dependencies
         uses: actions/cache@v2
         with:
@@ -57,3 +50,10 @@ jobs:
 
       - name: Setup problem matchers for PHPUnit
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
+
+      - name: show env vars
+        run: |
+          echo "env var: "
+          echo ${{ BTCPAY_STORE_ID }}
+          echo "env var secret: " 
+          echo ${{ secret.BTCPAY_STORE_ID }}
