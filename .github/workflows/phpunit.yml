@@ -56,4 +56,4 @@ jobs:
           echo "env var: "
           echo $BTCPAY_STORE_ID
           echo "env var secret: " 
-          echo ${{ secret.BTCPAY_STORE_ID }}
+          echo ${{ secrets.BTCPAY_STORE_ID }}
