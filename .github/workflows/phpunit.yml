@@ -4,6 +4,7 @@ on: [ push, pull_request ]
 jobs:
   phpunit:
     runs-on: ubuntu-latest
+    environment: phpunittest
     env:
       BTCPAY_HOST: ${{ secrets.BTCPAY_HOST }}
       BTCPAY_API_KEY: ${{ secrets.BTCPAY_API_KEY }}
