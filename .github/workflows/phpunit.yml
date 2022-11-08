@@ -34,8 +34,10 @@ jobs:
 
       - name: show env vars
         run: |
-          echo "env var ${{ BTCPAY_STORE_ID }}"
-          echo "env var secret ${{ secret.BTCPAY_STORE_ID }}"
+          echo "env var: "
+          echo ${{ BTCPAY_STORE_ID }}
+          echo "env var secret: " 
+          echo ${{ secret.BTCPAY_STORE_ID }}
 
       - name: Cache composer dependencies
         uses: actions/cache@v2
