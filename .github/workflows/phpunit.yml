@@ -54,6 +54,6 @@ jobs:
       - name: show env vars
         run: |
           echo "env var: "
-          echo ${{ BTCPAY_STORE_ID }}
+          echo $BTCPAY_STORE_ID
           echo "env var secret: " 
           echo ${{ secret.BTCPAY_STORE_ID }}
