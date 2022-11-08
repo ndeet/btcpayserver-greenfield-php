@@ -10,27 +10,27 @@ jobs:
       BTCPAY_STORE_ID: ${{ secrets.BTCPAY_STORE_ID }}
       BTCPAY_NODE_URI: ${{ secrets.BTCPAY_NODE_URI }}
 
-      steps:
-        - name: Output vars
-          uses: actions/checkout@v2
-          with:
-            fetch-depth: '0'
-          run: |
-            echo "env var secret: " 
-            echo ${{ secrets.BTCPAY_STORE_ID }}
-            echo "env var: "
-            echo "$BTCPAY_STORE_ID"
+    steps:
+      - name: Output vars
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+        run: |
+          echo "env var secret: " 
+          echo ${{ secrets.BTCPAY_STORE_ID }}
+          echo "env var: "
+          echo "$BTCPAY_STORE_ID"
 
-        - name: local vars
-          env:
-            HOST: ${{ secrets.BTCPAY_HOST }}
-            CUSTOM: "custom env var value"
-          run: |
-            echo "local env var: "
-             echo "$HOST"
-          
-        - shell: bash
-          env:
-            SUPER_SECRET: ${{ secrets.BTCPAY_API_KEY }}
-          run: |
-            echo "$SUPER_SECRET"
+      - name: local vars
+        env:
+          HOST: ${{ secrets.BTCPAY_HOST }}
+          CUSTOM: "custom env var value"
+        run: |
+          echo "local env var: "
+           echo "$HOST"
+
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.BTCPAY_API_KEY }}
+        run: |
+          echo "$SUPER_SECRET"
