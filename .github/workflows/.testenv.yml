@@ -25,9 +25,12 @@ jobs:
         run: |
           echo "local env var: "
            echo "$HOST"
+           echo "$CUSTOM"
 
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.BTCPAY_API_KEY }}
+          MYSECRET: "mysecret"
         run: |
           echo "$SUPER_SECRET"
+          echo "$MYSECRET"
