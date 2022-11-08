@@ -12,8 +12,6 @@ jobs:
 
     steps:
       - name: Output vars
-        with:
-          fetch-depth: '0'
         run: |
           echo "env var secret: " 
           echo ${{ secrets.BTCPAY_STORE_ID }}
